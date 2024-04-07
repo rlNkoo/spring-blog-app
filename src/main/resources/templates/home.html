@@ -15,11 +15,17 @@
                 <h2>
                     <a th:href="@{'/posts/' + ${post.id}}" th:text="${post.title}">Title</a>
                 </h2>
+                <h5 th:text="'Written by ' + ${post.account.firstName}">Account First Name</h5>
                 <h5 th:text="'Published on ' + ${post.createdAt}">Created At</h5>
                 <p th:text="${post.body}">body text</p>
                 <br />
             </div>
         </div>
+        <hr />
+        <ul>
+            <li><a th:href="@{/register}">Register</a></li>
+            <li><a th:href="@{/login}">Login</a></li>
+        </ul>
     </div>
 </body>
 </html>
